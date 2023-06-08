@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova guia</title>
+    <script>
+        function Pesquisar() {
+            var termo = document.getElementById("termo-pesquisa").value;
+
+            alert("Você pesquisou por: " + termo);
+        }
+
+        function verificarTeclaEnter(event) {
+            if (event.keyCode === 13) {
+                pesquisar();
+            }
+        }
+    </script>
+    <style>
+        .linha-vertical {
+            position: fixed;
+            height: 100%;
+            width: 300px;
+            background-color: #b3b3b3;
+            top: 0;
+            left: 0;
+        }
+
+        .linha-horizontal {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 68%;
+            height: 30px;
+            background-color: #b3b3b3;
+            z-index: 9999;
+        }
+
+        body {
+            background-color: #353535;
+        }
+
+        .meu-input {
+            height: 30px;
+            width: 300px;
+        }
+
+        .meu-input2 {
+            height: 30px;
+            width: 1200px;
+        }
+
+
+
+        .linha-vertical.right {
+            left: auto;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="linha-vertical"></div>
+    <div class="linha-vertical right"></div>
+    <hr class="linha-horizontal">
+
+    <br>
+    <center>
+        <h1>
+            <form action="https://www.google.com/search" method="GET">
+
+                <input type="text" name="query" class="meu-input2"
+                    placeholder="🔍   Pesquise no Monri ou digite um URL">
+                <br><br><br><br><br>
+
+                <font color="#bab046">
+
+                    <label for="q">M</label>
+                    <label for="q"><img src="images/lua.png" height="25" width="25"></label>
+                    <label for="q">n</label>
+                    <label for="q">r</label>
+                    <label for="q">i</label>
+
+                </font>
+                <br>
+                <input type="text" name="q" class="meu-input" placeholder="🔍   Pesquise no Monri ou digite um URL">
+                <button style="display: none;" onclick="pesquisar()"></button>
+
+            </form>
+        </h1>
+    </center>
+
+
+
+</body>
+
+</html>
